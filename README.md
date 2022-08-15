@@ -8,7 +8,7 @@ Setup the action:
 
 ```yaml
 steps:
-  - uses: Batchly-Ltd/sendinblue-template-action
+  - uses: sdaoud/sendinblue-template-action
     with:
       SENDINBLUE_API_KEY: ${{secrets.SENDINBLUE_API_KEY}}
       SENDER_NAME: "John Smith"
