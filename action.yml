@@ -1,0 +1,23 @@
+name: Sendinblue Template Action
+description: Creates and updates email templates for Sendinblue
+
+inputs:
+  SENDINBLUE_API_KEY:
+    description: Sendinblue API token
+    required: true
+  SENDER_NAME:
+    description: Name of the sender for all templates
+    required: true
+  SENDER_EMAIL:
+    description: Email of the sender for all templates
+    required: true
+  REPLY_TO:
+    description: Reply to for all templates
+    required: true
+  templates:
+    description: Directory of html templates
+    required: true
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
