@@ -83,7 +83,7 @@ async function getTemplatesByName(names) {
   const request = await api.getSmtpTemplates();
   const { templates } = request;
   return names.reduce((agg, x) => {
-    const template = templates?.find((t) => t.name === x);
+    const template = templates ? templates.find((t) => t.name === x) : false;
     agg[x] = template || false;
     return agg;
   }, {});
